@@ -8,7 +8,7 @@ const todoList = () => {
   }
 
   const overdue = () => {
-      array=[]
+      arr=[]
       c=[]
       let date = new Date();
 date. setDate(date. getDate() - 1);
@@ -25,10 +25,10 @@ function formatDate(date) {
 }
       for (let i = 0; i < all.length; i++) {
   if(all[i].dueDate==yesterday){
-  array[i]= all[i].title+' '+formatDate(date)
+  arr[i]= all[i].title+' '+formatDate(date)
       
   }}
-  const results = array.filter(element => {
+  const results = arr.filter(element => {
   return element !== undefined;
 });
  for (let i = 0; i < results.length; i++) {
@@ -47,7 +47,7 @@ function formatDate(date) {
   }
 
   const dueToday = () => {
-     array=[]
+     arr=[]
       c=[]
       let date = new Date();
 date. setDate(date. getDate() - 1);
@@ -77,7 +77,7 @@ function formatDate(date) {
   arr[i]= '['+c[i]+'] '+all[i].title
       
   }}
-  const results = array.filter(element => {
+  const results = arr.filter(element => {
   return element !== undefined;
 });
  
@@ -90,7 +90,7 @@ function formatDate(date) {
   }
 
   const dueLater = () => {
-     array=[]
+     arr=[]
       c=[]
       let date = new Date();
 date. setDate(date. getDate() + 1);
@@ -117,7 +117,7 @@ function formatDate(date) {
   arr[i]= '['+c[i]+'] '+all[i].title+' '+formatDate(date)
       
   }}
-  const results = array.filter(element => {
+  const results = arr.filter(element => {
   return element !== undefined;
 });
  
